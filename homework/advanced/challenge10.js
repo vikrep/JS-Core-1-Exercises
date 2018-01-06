@@ -26,3 +26,52 @@ Tip: you will need to research node require
 
 
 */
+var bottle = {
+    volume: 0,
+    fill: function(){
+        return this.volume = 100;// calling this function should make you bottles volume = 100; 
+    },
+    drink: function(){
+        return this.volume -= 10 ;// calling this function should decrease your bottles volume by 10;
+    },
+    empty: function(){
+        if(!this.volume)
+        return true;// this function should return true if your bottles volumn = 0
+    }
+}
+var athlete = {
+    hydration: 0,
+    distance: 0,
+    run: function(){
+        if(this.hydration > 0){
+        this.hydration--;
+        this.distance++;
+        }
+    },
+    drink: function(){
+        if(!bottle.empty())
+        return this.hydration++;
+    },
+};
+bottle.fill();
+bottle.drink();
+bottle.drink();
+bottle.drink();
+
+if(!bottle.empty()){
+	console.log('bottles volume = ' + bottle.volume);
+};
+
+athlete.run();
+athlete.drink();
+athlete.drink();
+athlete.drink();
+athlete.drink();
+athlete.run();
+athlete.run();
+athlete.run();
+console.log(athlete.hydration);
+console.log(athlete.distance);
+
+
+
