@@ -26,6 +26,6 @@ function mySort(numbers) {
   };
   return numbers;
 };
-var numbers = [12, 10, 15, 11, 9, 13, 16, 19, 25, 3];
+var numbers = [12, 10, 15, 11, 9, 9, 13, 16, 19, 122, 2, 57, 25, 3];
 mySort(numbers);
 console.log(numbers);
