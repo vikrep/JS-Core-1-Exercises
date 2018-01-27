@@ -14,30 +14,30 @@ http://www.mathsisfun.com/pascals-triangle.html
 
 // function pascal(num) {
 //   // TODO
-  
+
 // }
 
 // console.log(pascal(5));
 
 var numTiers = 14;
-    
+
 function pascalSimple(numTiers) {
 
-  var triangle = [ [1] ];
+  var triangle = [[1]];
   var tier;
 
-  for (var j = 0; j < numTiers-1; j++) {
+  for (var j = 0; j < numTiers - 1; j++) {
     tier = [1];
     for (var k = 1; k < triangle[j].length; k++) {
-      tier[k] = triangle[j][k] + triangle[j][k-1];
+      tier[k] = triangle[j][k] + triangle[j][k - 1];
     }
     tier.push(1);
     triangle.push(tier);
-    };
-      for (var i = 0; i < triangle.length; i++) {
-        console.log(triangle[i])
-      };
-    return triangle;
+  };
+  for (var i = 0; i < triangle.length; i++) {
+    console.log(triangle[i])
+  };
+  return triangle;
 };
 
 pascalSimple(numTiers);

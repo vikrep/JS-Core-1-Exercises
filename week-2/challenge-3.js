@@ -9,14 +9,14 @@ Desired Output;
 
 */
 
-var myArrays = [ 333, [ 100, 2, 5, 7 ], [ 87, 9, 122, 15 ], 25014, [ 240, 30, 5, 72, 81] ];
+var myArrays = [333, [100, 2, [5], 7], [87, 9, 122, 15], 25014, [240, 30, 5, 72, 81]];
 
 
-function flattenArray(myArray){
-var numbers = [];
-for (var i=0; i < myArray.length; i++){
-  numbers = numbers.concat(myArray[i]);
-};
+function flattenArray(myArray) {
+  var numbers = [];
+  for (var i = 0; i < myArray.length; i++) {
+    numbers = numbers.concat(myArray[i]);
+  };
   mySort(numbers);
   return numbers;
 }
@@ -42,3 +42,11 @@ function mySort(numbers) {
 };
 
 
+// eatPizza(pizzaLeft) {
+//   if !pizzaLeft {
+//     return;
+//   } else {
+//     eatSlice(pizzaLeft);
+//     return eatPizza(pizzaLeft);
+//   }
+// }

@@ -83,11 +83,49 @@ for (var i = 1; i <= 100; i++) {
   }
   console.log(addBetween(25, 75));
 */
-var person = {
-  firstName: "Nelson",
-  lastName: "Mandela",
-  occupation: "freedom fighter",
-  age: 95,
-  alive: false
+// var person = {
+//   firstName: "Nelson",
+//   lastName: "Mandela",
+//   occupation: "freedom fighter",
+//   age: 95,
+//   alive: false
+// };
+// console.log("Hi, my name is " +person.firstName +" " +person.lastName +". I am " +person.age +" years old, and work as a " +person.occupation +".");
+
+// for (var i = 10; i < 100; i = i + 10) {
+//   if (i > 50) {
+//       console.log("That's big")
+//   } else if (i > 100) {
+//       console.log("Winner winner chicken dinner")
+//   } else {
+//       console.log(i)
+//   }
+// }
+// for (var i=1; i < 20; i++)
+// {
+//     if (i % 15 == 0)
+//         console.log("FizzBuzz");
+//     else if (i % 3 == 0)
+//         console.log("Fizz");
+//     else if (i % 5 == 0)
+//         console.log("Buzz");
+//     else
+//         console.log(i);
+// }
+
+var student = {
+  name: "Simon",
+  age: "21",
+  interests: ["javascript", "react"]
 };
-console.log("Hi, my name is " +person.firstName +" " +person.lastName +". I am " +person.age +" years old, and work as a " +person.occupation +".");
+function printProperties(student) {
+// console.log(Object.keys(student))
+for (var key in student) {
+  if (student.hasOwnProperty(key)) {
+      console.log(key + " -> " + student[key]);
+  }
+}
+};
+printProperties(student);
+// Output in this case should be name, age, interests
+
