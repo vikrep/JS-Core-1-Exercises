@@ -223,4 +223,39 @@ function average(arr) {
   });
   return sum / myArr.length;
 };
-console.log(average(myArr));
+//console.log(average(myArr));
+
+
+// ---------------------------------------------------------------------------------------------------
+
+// Transform the following array [4,5,3,6,7,8,9,1,2] by 1) sorting it, 2) doubling each number,
+// and 3) filtering numbers less than 10 Write named functions that can be used as callbacks.
+
+function compareNum(a, b) {
+  if (a > b) return 1;
+  if (a < b) return -1;
+};
+var myArr = [4,5,3,6,7,8,9,1,2]
+.sort(compareNum)
+.map(function (item){
+  return item *2;
+})
+.filter(function(item){
+  return item < 10
+});
+console.log(myArr);
+
+
+
+
+// var test2 = function () { };
+// test2.prototype = {
+//   a: 1,
+//   b: 2,
+//   c: 3
+// };
+// var obj_test2 = new test2();
+// var obj_test3 = new test2()
+// console.log(test2.a);
+// console.log(obj_test2.a);
+// console.log(obj_test3.c);
